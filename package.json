@@ -4,7 +4,9 @@
   "description": "gulp plugin for Nightwatch.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,14 +24,16 @@
   "homepage": "https://github.com/tatsuyafw/gulp-nightwatch",
   "dependencies": {
     "fancy-log": "^1.3.2",
-    "minimist": "^1.1.1",
-    "nightwatch": "^1.3.1",
+    "minimist": "^1.2.6",
+    "nightwatch": "^1.7.11",
     "plugin-error": "^1.0.1",
-    "shell-quote": "^1.4.3",
-    "through": "^2.3.8"
+    "shell-quote": "^1.7.3",
+    "through": "^2.3.8",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "chai": "^2.1.2",
     "mocha": "^5.0.1"
-  }
+  },
+  "snyk": true
 }
